@@ -6,17 +6,7 @@ import { Configuration, OpenAIApi } from 'openai'
 dotenv.config()
 
 
-const data = [
-  {
-    name: 'ishimwe robert',
-    birthdate: 'March 14, 2000',
-    birthplace: 'kigali',
-    occupation: 'Physicist',
-    achievements: 'Developed the theory of relativity and made groundbreaking contributions to the study of quantum mechanics. Awarded the Nobel Prize in Physics in 1921.',
-    deathdate: 'April 18, 1955',
-    deathplace: 'Princeton, New Jersey, USA'
-  }
-]
+
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -63,6 +53,18 @@ app.post('/', async (req, res) => {
 //////////////trail version\\\\\\\\\\\\\
 app.post('/v2', async (req, res) => {
   try {
+    
+    const data = [
+  {
+    name: 'ishimwe robert',
+    birthdate: 'March 14, 2000',
+    birthplace: 'kigali',
+    occupation: 'Physicist',
+    achievements: 'Developed the theory of relativity and made groundbreaking contributions to the study of quantum mechanics. Awarded the Nobel Prize in Physics in 1921.',
+    deathdate: 'April 18, 1955',
+    deathplace: 'Princeton, New Jersey, USA'
+  }
+]
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
