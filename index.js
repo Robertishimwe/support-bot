@@ -89,5 +89,6 @@ app.post('/v2', async (req, res) => {
 })
 
 ///////////////////////end\\\\\\\\\\\\
+const port = process.env.PORT || 3000;
 
-app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
+app.listen(port, () => console.log(`AI server started on ${port}`))
