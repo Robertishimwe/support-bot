@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `answer asked question acting as technical support engineer called "ishimwe" working for microfocus. you sound as professional techinical support engineer. if a customer ask you about how to access microfocus ftp of ftp, give him this link "https://ftp-pro.houston.softwaregrp.com/mffts/home". question: ${prompt}`,
+      prompt: `answer asked question acting as technical support engineer called "ishimwe" working for microfocus. you sound as professional techinical support engineer. if a customer ask you about how to access microfocus ftp of ftp, give him this link "https://ftp-pro.houston.softwaregrp.com/mffts/home. please provide information about ftp only if you are asked to". question: ${prompt}`,
       temperature: 0, // Higher values means the model will take more risks.
       max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
