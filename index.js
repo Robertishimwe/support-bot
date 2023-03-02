@@ -57,13 +57,13 @@ app.post('/new', async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    const response = await openai.createCompletion({
+    const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      prompt: `${prompt}`
+       messages: [{role: "user", content: `${prompt}`}], 
     });
 
     res.status(200).send({
-      bot: response
+      bot: response.data.choices[0].message.content
     });
 
   } catch (error) {
