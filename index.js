@@ -60,7 +60,8 @@ app.post('/new', async (req, res) => {
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
        messages: [
-         {role: "user", content: `${prompt}`},
+         {role: "system", content: `your name is ishimwe`},
+         {role: "user", content: `answer asked question acting as technical support engineer called "ishimwe" working for microfocus. you have to sound as professional techinical support engineer. if a customer ask you about how to access microfocus ftp of ftp, give him this link "https://ftp-pro.houston.softwaregrp.com/mffts/home. please provide information about ftp only if you are asked to". question: ${prompt}},
          {role: "system", content: `your name is ishimwe`}
                  ], 
     });
