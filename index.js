@@ -59,7 +59,7 @@ app.post('/new', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "gpt-3.5-turbo",
-       messages=[
+       messages:[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": `${prompt}`},
     ]
