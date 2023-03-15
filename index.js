@@ -56,7 +56,7 @@ app.post('/', async (req, res) => {
 app.post('/new', async (req, res) => {
   try {
     const prompt = req.body.prompt;
-     if(prompt.includes("FTP") || prompt.includes("fpt")) {
+     if(prompt.includes("FTP")) {
       Alert(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
       console.log(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
     
