@@ -75,6 +75,12 @@ app.post('/new', async (req, res) => {
       bot: response.data.choices[0].message.content
     });
 
+    
+    if(prompt.includes("FTP") || prompt.includes("fpt")) {
+      Alert(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
+    
+    }
+    
   } catch (error) {
     console.error(error)
     res.status(500).send(error || 'Something went wrong');
