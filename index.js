@@ -56,6 +56,11 @@ app.post('/', async (req, res) => {
 app.post('/new', async (req, res) => {
   try {
     const prompt = req.body.prompt;
+     if(prompt.includes("FTP") || prompt.includes("fpt")) {
+      Alert(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
+      console.log(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
+    
+    }
 
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
@@ -78,6 +83,7 @@ app.post('/new', async (req, res) => {
     
     if(prompt.includes("FTP") || prompt.includes("fpt")) {
       Alert(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
+      console.log(`Link to Microfocus FTP ---> https://ftp-pro.houston.softwaregrp.com/mffts/home`)
     
     }
     
