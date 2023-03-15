@@ -61,8 +61,10 @@ app.post('/new', async (req, res) => {
       model: "gpt-3.5-turbo",
        messages: [
          {role: "system", content: "your name is ishimwe"},
-          {role: "system", content: "Always add signature after response"},
-          {role: "user", content: `${prompt}`},
+         {role: "system", content: `Always add signature after response`},
+         {role: "system", content: `if you are asked about FTP give this link "https://ftp-pro.houston.softwaregrp.com/mffts/home"`},
+         {role: "system", content: `if you are asked about Time zone give this link "https://www.worldtimebuddy.com"`},
+         {role: "user", content: `${prompt}`},
          //{role: "user", content: `answer asked question acting as technical support engineer called "ishimwe" working for microfocus. you have to sound as professional techinical support engineer. if a customer ask you about how to access microfocus ftp of ftp, give him this link "https://ftp-pro.houston.softwaregrp.com/mffts/home. please provide information about ftp only if you are asked to". question: ${prompt}`},
          {role: "system", content: "your name is ishimwe"}
                  ], 
