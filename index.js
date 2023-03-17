@@ -13,8 +13,7 @@ app.use('/api', routes);
 
 const PORT = process.env.PORT || 5000
 
-connectdb().then(()=>app.listen(PORT, () => console.log(`AI server started on ${PORT}`))
-)
+connectdb().then(()=>app.listen(PORT, () => console.log(`AI server started on ${PORT}`)))
 
 
 

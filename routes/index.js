@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import chatRoutes from './chatRoutes.js';
-import commandRoutes from './commandRoutes';
+import commandRoutes from './commandRoutes.js';
 
 
 const router = Router();
