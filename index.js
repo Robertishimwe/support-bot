@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-const createChatCompletion = require("./services/openai.cjs");
-//import {createChatCompletion} from './services/openai'
+//const createChatCompletion = require("./services/openai.cjs");
+import {createChatCompletion} from 'workspaces/support-bot/services/openai.js'
 //import { Configuration, OpenAIApi } from 'openai'
 
 // dotenv.config()
