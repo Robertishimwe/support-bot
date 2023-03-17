@@ -11,7 +11,10 @@ app.use(express.json())
 
 app.post('/new', async (req, res) => {
   try {
+    
     const prompt = req.body.prompt;
+
+    
     
     
      if(prompt.toLowerCase().includes("FTP LINK") || prompt.includes("ftp link") || prompt.includes("access ftp")) {
