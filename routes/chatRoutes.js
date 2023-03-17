@@ -1,12 +1,13 @@
 import { Router } from 'express';
 
+import chatControllers from '../controller/chatController'
+
 // import AppointmentController from '../controller/appointmentBooking'
 
 const router = Router();
 
 
-
-// router.post('/booking',verify,isPatient,appointmentBookingValidation,AppointmentController.patientsBookingAppointment)
+router.post('/', chatControllers)
 
 
 
