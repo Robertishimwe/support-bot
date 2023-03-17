@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import commandControllers from '../controller/commandController'
+import commandControllers from '../controller/commandController.js'
 
 
 const router = Router();
