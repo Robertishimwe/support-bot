@@ -21,4 +21,4 @@ const createChatCompletion = async (prompt) => {
   return response.data.choices[0].message.content
 }
 
-export { createChatCompletion }
+module.exports = { createChatCompletion }
