@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import chatControllers from '../controller/chatController'
+import chatControllers from '../controller/chatController.js'
 
 // import AppointmentController from '../controller/appointmentBooking'
 
