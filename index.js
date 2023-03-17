@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-const createChatCompletion = require("./services/openai");
+const createChatCompletion = require("./services/openai.cjs");
 //import {createChatCompletion} from './services/openai'
 //import { Configuration, OpenAIApi } from 'openai'
 
