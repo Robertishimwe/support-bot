@@ -1,7 +1,7 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
-import createChatCompletion from './services/openai'
+import createChatCompletion from '../services/openai'
 //import { Configuration, OpenAIApi } from 'openai'
 
 // dotenv.config()
