@@ -8,11 +8,15 @@ import connectdb from './config/database.js';
 const app = express()
 app.use(cors())
 app.use(express.json())
-connectdb()
-
 
 app.use('/api', routes);
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, () => console.log(`AI server started on ${PORT}`))
+connectdb().then(()=>app.listen(PORT, () => console.log(`AI server started on ${PORT}`))
+)
+
+
+
+
+// app.listen(PORT, () => console.log(`AI server started on ${PORT}`))
