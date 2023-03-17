@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import chatRoutes from './chatRoutes';
+import chatRoutes from './chatRoutes.js';
 
 
 const router = Router();
