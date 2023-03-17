@@ -7,7 +7,7 @@ import chatControllers from '../controller/chatController.js'
 const router = Router();
 
 
-router.post('/', chatControllers)
+router.post('/', chatControllers.chat)
 
 
 
