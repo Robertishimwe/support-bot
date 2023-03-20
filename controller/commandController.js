@@ -1,4 +1,4 @@
-
+import Command from '../model/commands.js'
 
 class commandControllers {
 
