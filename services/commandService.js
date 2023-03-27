@@ -48,3 +48,5 @@ const deleteCommand = (commandId) => {
     });
   });
 };
+
+export { deleteCommand, createCommand }
