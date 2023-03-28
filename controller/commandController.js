@@ -7,9 +7,9 @@ class commandControllers {
     static createCommand = async (req, res) => {
 
         const {command, value} = req.body;
-        const response = createCommand(command,value)
+        const response = await createCommand(command,value)
         console.log(response)
-        res.send(response)
+        return res.status(200).send({"response":response})
 
 
     }
