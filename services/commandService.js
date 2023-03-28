@@ -54,6 +54,7 @@
 import Command from '../model/commands.js';
 
 const createCommand = async ({ command, value }) => {
+  console.log({ command, value })
   const newCommand = new Command({ command, value });
 
   try {

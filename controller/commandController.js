@@ -9,7 +9,7 @@ class commandControllers {
         const {command, value} = req.body;
         const response = await createCommand(command,value)
         console.log(response)
-        return res.status(200).send({"response":response})
+        return res.status(200).send(response)
 
 
     }
