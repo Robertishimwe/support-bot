@@ -1,5 +1,5 @@
 import Command from '../model/commands.js'
-import {deleteCommand, createCommand} from '../services/commandService.js'
+import {deleteCommand, createCommand, findComand} from '../services/commandService.js'
 
 class commandControllers {
 
@@ -11,6 +11,14 @@ class commandControllers {
         console.log(response)
         return res.status(200).send(response)
 
+
+    }
+
+    static findAllCommand = async (req, res) =>{
+
+        const response = await findComand()
+        console.log(response)
+        return res.status(200).send(response)
 
     }
 }

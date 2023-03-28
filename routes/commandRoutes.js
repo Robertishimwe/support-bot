@@ -7,6 +7,7 @@ const router = Router();
 
 
 router.post('/create', commandControllers.createCommand)
+router.get('/get-all', commandControllers.findAllCommand)
 
 
 
