@@ -79,4 +79,22 @@ const deleteCommand = async (commandId) => {
   }
 };
 
-export { deleteCommand, createCommand };
+const findComand = async (query) =>{
+
+  try {
+    const CommandListe = await Command.find(query);
+    if (!CommandListe) {
+      return { error: true, message: "No Command found" };
+    }
+    console.log('Command list:', CommandListe);
+    return { error: false, data: CommandListe };
+
+    
+  } catch (error) {
+    return { error: true, err };
+
+  }
+
+}
+
+export { deleteCommand, createCommand, findComand };
