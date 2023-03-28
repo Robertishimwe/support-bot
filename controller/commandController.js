@@ -21,6 +21,13 @@ class commandControllers {
         return res.status(200).send(response)
 
     }
+
+    static findCommand =  async (req, res) => {
+    const { command } = req.params
+    const response = await findComand({command: command})
+    return res.status(200).send(response)
+
+    }
 }
 
 export default commandControllers;
