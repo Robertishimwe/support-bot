@@ -11,9 +11,12 @@ class chatControllers {
             const text = req.body.prompt;
 
         const wordsArray = await findComand()
+        
+        const extractCommands = wordsArray => arr.map(obj => obj.command);
 
 
-            const findMatchingWord = (text, wordsArray)=> {
+
+            const findMatchingWord = (text, extractCommands)=> {
               const words = text.split(' '); // split text into individual words
               for (let i = 0; i < words.length; i++) {
                 if (wordsArray.includes(words[i])) {
@@ -25,7 +28,7 @@ class chatControllers {
               return false; // return false if no match is found
             }
             
-          // findMatchingWord(text, wordsArray)
+           findMatchingWord(text, extractCommands)
 
 
 
