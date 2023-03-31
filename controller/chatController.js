@@ -19,7 +19,7 @@ class chatControllers {
             const findMatchingWord = (text, extractCommands)=> {
               const words = text.split(' '); // split text into individual words
               for (let i = 0; i < words.length; i++) {
-                if (wordsArray.includes(words[i])) {
+                if ( extractCommands.includes(words[i])) {
                   console.log({"matching words":words[i]})
                   return words[i]; // return the matching word
                 }
