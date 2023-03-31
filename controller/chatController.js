@@ -11,8 +11,10 @@ class chatControllers {
             const text = req.body.prompt;
 
         const wordsArray = await findComand()
+        console.log(wordsArray)
         
         const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
+        console.log(extractCommands)
 
 
 
