@@ -25,7 +25,7 @@ class chatControllers {
               return false; // return false if no match is found
             }
             
-
+           findMatchingWord(text, wordsArray)
 
 
 
