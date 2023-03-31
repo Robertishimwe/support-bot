@@ -12,7 +12,7 @@ class chatControllers {
 
         const wordsArray = await findComand()
         
-        const extractCommands = wordsArray => arr.map(obj => obj.command);
+        const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
 
 
 
