@@ -14,7 +14,7 @@ class chatControllers {
         console.log("before extract",wordsArray)
         
         const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
-        console.log("after extract", extractCommands())
+        console.log("after extract", extractCommands(wordsArray))
 
 
 
