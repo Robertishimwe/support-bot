@@ -45,7 +45,9 @@ class chatControllers {
         const myServeResponse = await findComand({command: findMatchingWord(text, extractCommands(commandsArray?.data))})
         const response = await createChatCompletion(text);
       // console.log(response);
-      return res.status(200).send({ dbres: myServeResponse.data[0].value, bot: `${myServeResponse.data[0].value}<br/>${response}` });
+      return res.status(200).send({ dbres: myServeResponse.data[0].value, bot: `${myServeResponse.data[0].value}
+      
+      ${response}` });
         
       }else{
         const response = await createChatCompletion(text);
