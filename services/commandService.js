@@ -86,7 +86,6 @@ const findComand = async (query) =>{
     if (!CommandListe) {
       return { error: true, message: "No Command found" };
     }
-    console.log('Command list:', CommandListe);
     return { error: false, data: CommandListe };
 
     
