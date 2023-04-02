@@ -8,29 +8,29 @@ class chatControllers {
 
         try {
     
-            const text = req.body.prompt;
+        const text = req.body.prompt;
 
         const wordsArray = await findComand()
-        console.log(wordsArray)
+        console.log("before extract",wordsArray)
         
         const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
-        console.log(extractCommands)
+        console.log("before extract", extractCommands)
 
 
 
-            const findMatchingWord = (text, extractCommands)=> {
-              const words = text.split(' '); // split text into individual words
-              for (let i = 0; i < words.length; i++) {
-                if ( extractCommands.includes(words[i])) {
-                  console.log({"matching words":words[i]})
-                  return words[i]; // return the matching word
-                }
-              }
-              console.log(false)
-              return false; // return false if no match is found
-            }
+          //   const findMatchingWord = (text, extractCommands)=> {
+          //     const words = text.split(' '); // split text into individual words
+          //     for (let i = 0; i < words.length; i++) {
+          //       if ( extractCommands.includes(words[i])) {
+          //         console.log({"matching words":words[i]})
+          //         return words[i]; // return the matching word
+          //       }
+          //     }
+          //     console.log(false)
+          //     return false; // return false if no match is found
+          //   }
             
-           findMatchingWord(text, extractCommands)
+          //  findMatchingWord(text, extractCommands)
 
 
 
