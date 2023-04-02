@@ -12,7 +12,8 @@ class chatControllers {
       const text = req.body.prompt;
 
       const commandsArray = await findComand(); // use a more descriptive variable name
-      console.log("before extract", typeof(commandsArray));
+      console.log("before extract", commandsArray);
+      res.send(commandsArray)
 
       const extractCommands = (wordsArray) => {
         if (!Array.isArray(wordsArray)) {
