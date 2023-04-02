@@ -43,15 +43,18 @@ class chatControllers {
 
       if(findMatchingWord(text, extractCommands(commandsArray?.data))){
         const myServeResponse = await findComand({command: findMatchingWord(text, extractCommands(commandsArray?.data))})
-        console.log("yeeeeeeeeee",myServeResponse)
+        const response = await createChatCompletion(text);
+      // console.log(response);
+      return res.status(200).send({ dbres: myServeResponse.data[0].value, bot: response });
+        
       }else{
         console.log("foooooooooo")
       }
 
 
-      const response = await createChatCompletion(text);
-      console.log(response);
-      return res.status(200).send({ bot: response });
+      // const response = await createChatCompletion(text);
+      // // console.log(response);
+      // return res.status(200).send({ bot: response });
     } catch (error) {
       console.error(error);
       res.status(500).send(error || "Something went wrong");
