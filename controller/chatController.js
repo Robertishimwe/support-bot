@@ -1,8 +1,4 @@
-import {
-  deleteCommand,
-  createCommand,
-  findComand,
-} from "../services/commandService.js";
+import { findComand } from "../services/commandService.js";
 import { createChatCompletion } from "../services/openai.js";
 
 class chatControllers {
@@ -23,39 +19,34 @@ class chatControllers {
         console.log("after extract", extractedCommands);
         return extractedCommands; // add a return statement to return the extracted commands
       };
-      
 
-
-
-
-      
-        const findMatchingWord = (text, extractCommands)=> {
-          const words = text.split(' '); // split text into individual words
-          for (let i = 0; i < words.length; i++) {
-            if ( extractCommands.includes(words[i])) {
-              console.log({"matching words":words[i]})
-              return words[i]; // return the matching word
-            }
+      const findMatchingWord = (text, extractCommands) => {
+        const words = text.split(" "); // split text into individual words
+        for (let i = 0; i < words.length; i++) {
+          if (extractCommands.includes(words[i])) {
+            console.log({ "matching words": words[i] });
+            return words[i]; // return the matching word
           }
-          console.log(false)
-          return false; // return false if no match is found
         }
+        console.log(false);
+        return false; // return false if no match is found
+      };
 
-      if(findMatchingWord(text, extractCommands(commandsArray?.data))){
-        const myServeResponse = await findComand({command: findMatchingWord(text, extractCommands(commandsArray?.data))})
+      if (findMatchingWord(text, extractCommands(commandsArray?.data))) {
+        const myServeResponse = await findComand({
+          command: findMatchingWord(text, extractCommands(commandsArray?.data)),
+        });
         const response = await createChatCompletion(text);
-      // console.log(response);
-      return res.status(200).send({ dbres: myServeResponse.data[0].value, bot: `${myServeResponse.data[0].value}
-      
-      ${response}` });
-        
-      }else{
+        return res.status(200).send({
+          dbres: myServeResponse.data[0].value,
+          bot: `You might be looking for this ${myServeResponse.data[0].value}
+     -- 
+    ${response}`,
+        });
+      } else {
         const response = await createChatCompletion(text);
-        // console.log(response);
         return res.status(200).send({ bot: response });
-      
       }
-
     } catch (error) {
       console.error(error);
       res.status(500).send(error || "Something went wrong");
