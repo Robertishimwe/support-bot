@@ -13,7 +13,7 @@ class chatControllers {
 
       const commandsArray = await findComand(); // use a more descriptive variable name
       console.log("before extract", commandsArray);
-      res.send(commandsArray)
+      // res.send(commandsArray)
 
       const extractCommands = (wordsArray) => {
         if (!Array.isArray(wordsArray)) {
@@ -23,7 +23,7 @@ class chatControllers {
         console.log("after extract", extractedCommands);
         return extractedCommands; // add a return statement to return the extracted commands
       };
-      extractCommands(commandsArray);
+      extractCommands(commandsArray?.data);
 
       // const extractedCommands = extractCommands(commandsArray); // call the function and store the returned value in a variable
 
