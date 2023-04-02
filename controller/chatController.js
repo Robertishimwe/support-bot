@@ -23,7 +23,10 @@ class chatControllers {
         console.log("after extract", extractedCommands);
         return extractedCommands; // add a return statement to return the extracted commands
       };
-      extractCommands(commandsArray?.data);
+      
+
+
+
 
       // const extractedCommands = extractCommands(commandsArray); // call the function and store the returned value in a variable
 
@@ -52,7 +55,7 @@ class chatControllers {
           return false; // return false if no match is found
         }
 
-       findMatchingWord(text, extractCommands)
+       findMatchingWord(text, extractCommands(commandsArray?.data))
 
       // if(await findComand({command: prompt})){
 
