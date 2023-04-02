@@ -48,7 +48,10 @@ class chatControllers {
       return res.status(200).send({ dbres: myServeResponse.data[0].value, bot: response });
         
       }else{
-        console.log("foooooooooo")
+        const response = await createChatCompletion(text);
+        // console.log(response);
+        return res.status(200).send({ bot: response });
+      
       }
 
     } catch (error) {
