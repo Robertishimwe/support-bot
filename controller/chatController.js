@@ -42,7 +42,8 @@ class chatControllers {
         }
 
       if(findMatchingWord(text, extractCommands(commandsArray?.data))){
-        console.log("yeeeeeeeeee")
+        const myServeResponse = await findComand({command: findMatchingWord(text, extractCommands(commandsArray?.data))})
+        console.log("yeeeeeeeeee",myServeResponse)
       }else{
         console.log("foooooooooo")
       }
