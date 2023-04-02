@@ -13,8 +13,8 @@ class chatControllers {
         const wordsArray = await findComand()
         console.log("before extract",wordsArray)
         
-        const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
-        console.log("before extract", extractCommands)
+        // const extractCommands = wordsArray => wordsArray.map(obj => obj.command);
+        // console.log("before extract", extractCommands)
 
 
 
