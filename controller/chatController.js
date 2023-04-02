@@ -40,19 +40,19 @@ class chatControllers {
       //   };
       // extractCommands(wordsArray)
 
-      //   const findMatchingWord = (text, extractCommands)=> {
-      //     const words = text.split(' '); // split text into individual words
-      //     for (let i = 0; i < words.length; i++) {
-      //       if ( extractCommands.includes(words[i])) {
-      //         console.log({"matching words":words[i]})
-      //         return words[i]; // return the matching word
-      //       }
-      //     }
-      //     console.log(false)
-      //     return false; // return false if no match is found
-      //   }
+        const findMatchingWord = (text, extractCommands)=> {
+          const words = text.split(' '); // split text into individual words
+          for (let i = 0; i < words.length; i++) {
+            if ( extractCommands.includes(words[i])) {
+              console.log({"matching words":words[i]})
+              return words[i]; // return the matching word
+            }
+          }
+          console.log(false)
+          return false; // return false if no match is found
+        }
 
-      //  findMatchingWord(text, extractCommands)
+       findMatchingWord(text, extractCommands)
 
       // if(await findComand({command: prompt})){
 
